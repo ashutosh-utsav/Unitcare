@@ -5,6 +5,9 @@ description = "Backend for the Ambient Listening EMR prototype."
 dependencies = [
     "openai-whisper",
     "google-generativeai",
-    "python-dotenv",     
-    "pydantic",         
+    "python-dotenv",
+    "pydantic",
+    "fastapi", # For the web framework
+    "uvicorn[standard]", # For the web server
+    "python-multipart", # For file uploads
 ]
