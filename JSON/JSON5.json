@@ -1,0 +1,81 @@
+{
+	"PatientName": "Alice Smith",
+	"PatientId": "119598",
+	"Gender": "Female",
+	"Age": 28,
+	"VisitDate": "2024-05-27 18:14:07.893",
+	"Doctor": "Dr. Lee",
+	"VisitDetails": {
+		"Diagnosis": [
+			{
+				"Type": "Principal",
+				"Code": "K29.70",
+				"Description": "Gastritis, unspecified, without bleeding"
+			},
+			{
+				"Type": "Secondary",
+				"Code": "S83.242A",
+				"Description": "Oth tear of medial meniscus, current injury, left knee, init"
+			}
+		],
+		"Complaints": "PAIN ON WALKING ,BENDING ,CLIMBING MOVEMENTS, SQUATTING AND STANDING, NO INSTABILITY NO LOCKING",
+		"Allergies": [
+			{
+				"Type": "Medication Allergy",
+				"Severity": "Mild",
+				"AdverseReaction": "Swollen eyes or face"
+			},
+			{
+				"Type": "Animal Allergy",
+				"Severity": "Major",
+				"AdverseReaction": "Swollen lips"
+			}
+		],
+		"Procedure": [
+			{
+				"Code": "96372",
+				"Name": "THER/PROPH/DIAG INJ SC/IM"
+			}
+		],
+		"Investigations": [
+			{
+				"Code": "86140",
+				"Name": "C-REACTIVE PROTEIN"
+			}
+		],
+		"Medication": [
+			{
+				"Name": "PANTOR 20"
+			},
+			{
+				"Name": "DEFAL 6"
+			},
+			{
+				"Name": "DESCONTRAN 500 MG+ 2 MG"
+			}
+		],
+		"PreCheck": [
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "40",
+				"Pluse": "75",
+				"O2 SAT": "96",
+				"Pain Scale": "3",
+				"DateTime": "2024-05-27 18:14:07.893"
+			},
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "40",
+				"Pluse": "75",
+				"O2 SAT": "99",
+				"Pain Scale": "3",
+				"DateTime": "2024-08-17 11:26:10.530"
+			}
+		],
+		"DetalProcedure": [],
+		"FamilyHistory": "Patient's mother has a history of chronic migraines and hypertension. Father has Type 2 Diabetes and underwent bypass surgery at the age of 60. Paternal grandfather had a history of colon cancer. No known genetic disorders in siblings.",
+		"SocialHistory" : "Patient works as a software developer, often spending 10–12 hours in front of a computer. Rarely exercises due to work commitments. Occasionally consumes alcohol during social gatherings (once or twice a month). Non-smoker. Lives alone in an urban apartment. Reports moderate stress due to work deadlines."
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"PatientName": "Alice Smith",
+	"PatientId": "119598",
+	"Gender": "Female",
+	"Age": 28,
+	"VisitDate": "2024-12-31 19:07:26.490",
+	"Doctor": "Dr. Lee",
+	"VisitDetails": {
+		"Diagnosis": [
+			{
+				"Type": "Principal",
+				"Code": "M72.2",
+				"Description": "Plantar fascial fibromatosis"
+			},
+			{
+				"Type": "Secondary",
+				"Code": "M77.31",
+				"Description": "Calcaneal spur, right foot"
+			}
+		],
+		"Complaints": "Physiotherapy day 2. Left side heel pain since 4 months; more in the morning, less after walking for some time.",
+		"Allergies": [
+			{
+				"Type": "NO Allergy",
+				"Severity": null,
+				"AdverseReaction": null
+			}
+		],
+		"Procedure": [
+			{
+				"Code": "97032",
+				"Description": "ELECTRICAL STIMULATION"
+			}
+		],
+		"Medication": [
+			{
+				"Name": "GASORAB 20MG"
+			}
+		],
+		"PreCheck": [
+			{
+				"Height": "156",
+				"Weight": "62",
+				"Temp": "37",
+				"Pluse": "77",
+				"O2 SAT": "96",
+				"Pain Scale": "3",
+				"DateTime": "2024-12-31 19:07:26.490"
+			},
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "37",
+				"Pluse": "78",
+				"O2 SAT": "99",
+				"Pain Scale": "3",
+				"DateTime": "2024-12-31 19:07:26.490"
+			}
+		],
+		"DetalProcedure": [],
+		"FamilyHistory": "Patient's mother has a history of chronic migraines and hypertension. Father has Type 2 Diabetes and underwent bypass surgery at the age of 60. Paternal grandfather had a history of colon cancer. No known genetic disorders in siblings.",
+		"SocialHistory": "Patient works as a software developer, often spending 10–12 hours in front of a computer. Rarely exercises due to work commitments. Occasionally consumes alcohol during social gatherings (once or twice a month). Non-smoker. Lives alone in an urban apartment. Reports moderate stress due to work deadlines."
+	}
+}

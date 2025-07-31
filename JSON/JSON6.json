@@ -1,0 +1,70 @@
+{
+	"PatientName": "Alice Smith",
+	"PatientId": "119598",
+	"Gender": "Female",
+	"Age": 28,
+	"VisitDate": "2024-06-10 19:20:59.457",
+	"Doctor": "Dr. Lee",
+	"VisitDetails": {
+		"Diagnosis": [
+			{
+				"Type": "Principal",
+				"Code": "S93.402A",
+				"Description": "Sprain of unspecified ligament of left ankle, init encntr"
+			},
+			{
+				"Type": "Secondary",
+				"Code": "S92.315A",
+				"Description": "Nondisp fx of first metatarsal bone, left foot, init"
+			}
+		],
+		"Complaints": "PAIN AND SWELLING OVER LEFT FOOT SINCE 10 DAYS. HEAVY MACHINERY HIT OVER HIS LEFT LEG AND FELL OVER HIS LEFT FOOT. . PAIN WAS ACUTE IN ONSET AND AGGREVATES ON WALKING, CLIMBING STAIRS AND STANDING. PAIN NOT  REDUCED WITH REST AND IMMOBILISATION. HE IS UNABLE TO DO HIS DAY TO DAY ACTIVITIES. UNABLE TO STAND ON TIPTOES. THERE ARE MULTIPLE ABRASSIONS OVER HIS LEFT LEG AND FOOT, WHICH ARE STILL BLEEDING AND INFECTIOUS.",
+		"Observations/Physical Examination": "LIMPING AND ANTALGIC GAIT. NO OBVIOUS DEFORMITIES NOTED. SWELLING NOTED OVER LEFT MID FOOT, ANKLE AND FORE FOOT. BRUISING AND ECHYMOSIS PRESENT. MULTIPLE ABRASSIONS PRESENT, SOME OF WHICH ARE STILL BLEEDING ( LARGEST IS 0.5 X 0.8CM).  , NO SINUSES. NO LOCAL RISE OF TEMPERATURE. TENDERNESS OVER FIRST METATARSAL.  ABNORMAL MOBILITY AND CREPITUS PRESENT . NO DISTAL NEURO VASCULAR DEFICITS. RANGE OF MOVEMENT PAINFULLY RESTRICTED.  NO LEG-LENGTH DISCREPANCY, . ACHILLES TENDON NORMAL. PATIENT IS UNABLE TO STAND ON THE TIPTOES.  UW PLSR. ADVISED RISKS ON RX FOR: NILCO.",
+		"Allergies": [
+			{
+				"Type": "Medication Allergy",
+				"Severity": "Mild",
+				"AdverseReaction": "Swollen eyes or face"
+			},
+			{
+				"Type": "Animal Allergy",
+				"Severity": "Major",
+				"AdverseReaction": "Swollen lips"
+			}
+		],
+		"Radiology": [
+			{
+				"Code": "73620",
+				"Description": "X-RAY EXAM OF FOOT"
+			}
+		],
+		"Medication": [
+			{
+				"Name": "GASORAB 20MG"
+			}
+		],
+		"PreCheck": [
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "37",
+				"Pluse": "78",
+				"O2 SAT": "96",
+				"Pain Scale": "3",
+				"DateTime": "2024-06-10 19:20:59.457"
+			},
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "37",
+				"Pluse": "78",
+				"O2 SAT": "99",
+				"Pain Scale": "3",
+				"DateTime": "2024-06-10 19:20:59.457"
+			}
+		],
+		"DetalProcedure": [],
+		"FamilyHistory": "Patient's mother has a history of chronic migraines and hypertension. Father has Type 2 Diabetes and underwent bypass surgery at the age of 60. Paternal grandfather had a history of colon cancer. No known genetic disorders in siblings.",
+		"SocialHistory": "Patient works as a software developer, often spending 10–12 hours in front of a computer. Rarely exercises due to work commitments. Occasionally consumes alcohol during social gatherings (once or twice a month). Non-smoker. Lives alone in an urban apartment. Reports moderate stress due to work deadlines."
+	}
+}

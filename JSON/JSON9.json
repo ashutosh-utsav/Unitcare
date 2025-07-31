@@ -1,0 +1,65 @@
+{
+	"PatientName": "Alice Smith",
+	"PatientId": "119598",
+	"Gender": "Female",
+	"Age": 28,
+	"VisitDate": "2024-05-30 10:57:30.800",
+	"Doctor": "Dr. Lee",
+	"VisitDetails": {
+		"Diagnosis": [
+			{
+				"Type": "Principal",
+				"Code": "M76.61",
+				"Description": "Achilles tendinitis, right leg"
+			},
+			{
+				"Type": "Secondary",
+				"Code": "M79.604",
+				"Description": "Pain in right leg"
+			}
+		],
+		"Complaints": "PAIN AND SWELLING  OVER RIGHT ANKLE SINCE 4 DAYS, NO H/O TRAUMA . PAIN IS MAINLY FOCUSSED AROUND POSTERIOR ASPECT. ONSET OF PAIN IS INSIDIOUS AND AGGREVATES ON WALKING , BENDING ,CLIMBING, MOVEMENTS , SQUATTING AND STANDING. NO INSTABILITY C/O. PAIN IS RELIEVED BY REST AND ELEVATION. . PAIN IS HINDERING WITH HER DAY TO DAY ACTIVITIES AND WORK. NO H/O FEVER, NIGHT SWEATS. NO H/O RECURRENT INSTABILTY IN THE PAST.",
+		"Observations/Physical Examination": "NO OBVIOUS WASTING OF MUSCLES OR DEFORMITY NOTED. NO SCARS , NO BRUISING AND ECHYMOSIS, ANTALGIC GAIT. SIT TO STAND AND SQUAT PAINFUL. NO LOCAL RISE OF TEMPERATURE, EFFUSION PRESENT, TENDERNESS OVER ACHILLES ATTACHMENT, ROM: PLANTAR PLEXION AND DORSIFLEXION, INVERSION AND EVERSION PAINFUL, ABDUCTION AND ADDUCTION OF FOREFOOT NORMAL NO FOOT VARUS OR VALGUS DEFORMITY , HIGH ARCH OR NORMAL OR FLAT. LOT… STRESS TEST FOR MEDIAL AND LATERAL COLLATERAL LIGAMENTS, SQUEEZE TEST FOR SYNDESMOTIC INJURY, ANTERIOR DRAWER TEST AND TALAR TILT TEST FOR ATFL NEGATIVE. HOMANS TEST NEGATIVE, KLEIGERS TEST FOR DELTOID LIGAMENT NEGATIVE. TALAR TILT TEST NEGATVE. NO DNVD. ",
+		"Allergies": [
+			{
+				"Type": "NO Allergy",
+				"Severity": null,
+				"AdverseReaction": null
+			}
+		],
+		"Investigations": [
+			{
+				"Code": "85025",
+				"Description": "COMPLETE CBC W/AUTO DIFF WBC"
+			}
+		],
+		"Medication": [
+			{
+				"Name": "GASORAB 20MG"
+			}
+		],
+		"PreCheck": [
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "37",
+				"Pluse": "78",
+				"O2 SAT": "96",
+				"Pain Scale": "3",
+				"DateTime": "2024-05-30 10:57:30.800"
+			},
+			{
+				"Height": "156",
+				"Weight": "63",
+				"Temp": "37",
+				"Pluse": "78",
+				"O2 SAT": "99",
+				"Pain Scale": "3",
+				"DateTime": "2024-05-30 10:57:30.800"
+			}
+		],
+		"DetalProcedure": [],
+		"FamilyHistory": "Patient's mother has a history of chronic migraines and hypertension. Father has Type 2 Diabetes and underwent bypass surgery at the age of 60. Paternal grandfather had a history of colon cancer. No known genetic disorders in siblings.",
+		"SocialHistory": "Patient works as a software developer, often spending 10–12 hours in front of a computer. Rarely exercises due to work commitments. Occasionally consumes alcohol during social gatherings (once or twice a month). Non-smoker. Lives alone in an urban apartment. Reports moderate stress due to work deadlines."
+	}
+}

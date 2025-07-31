@@ -1,7 +1,10 @@
 [project]
-name = "task1"
+name = "ambient-listening-backend"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+description = "Backend for the Ambient Listening EMR prototype."
+dependencies = [
+    "openai-whisper",
+    "google-generativeai",
+    "python-dotenv",     
+    "pydantic",         
+]
