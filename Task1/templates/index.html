@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Listening Prototype</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #1a2b4d;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .upload-area {
+            border: 2px dashed #d0dbe5;
+            border-radius: 8px;
+            padding: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .upload-area:hover {
+            background-color: #f8fafc;
+            border-color: #a0b4c8;
+        }
+        #file-input {
+            display: none;
+        }
+        #file-name {
+            margin-top: 15px;
+            font-weight: 500;
+            color: #2c5282;
+        }
+        button {
+            background-color: #3490dc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        button:disabled {
+            background-color: #a0aec0;
+            cursor: not-allowed;
+        }
+        button:hover:not(:disabled) {
+            background-color: #2779bd;
+        }
+        .results {
+            margin-top: 30px;
+            text-align: left;
+            display: none; /* Hidden by default */
+        }
+        .results h2 {
+            color: #1a2b4d;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        pre {
+            background-color: #edf2f7;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: "Courier New", Courier, monospace;
+            line-height: 1.6;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #3490dc;
+            animation: spin 1s ease infinite;
+            margin: 20px auto;
+            display: none; /* Hidden by default */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ambient Listening Prototype</h1>
+        <p>Upload an audio file (.mp3, .wav, etc.) of a doctor-patient consultation to extract structured EMR data.</p>
+        
+        <form id="upload-form">
+            <div class="upload-area" id="upload-area">
+                <input type="file" id="file-input" name="file" accept="audio/*">
+                <label for="file-input">
+                    <strong>Click to select a file</strong>
+                    <div id="file-name">No file chosen</div>
+                </label>
+            </div>
+            <button type="submit" id="submit-button" disabled>Process Audio</button>
+        </form>
+
+        <div class="spinner" id="spinner"></div>
+
+        <div class="results" id="results-area">
+            <h2>Extracted Data</h2>
+            <pre id="results-pre"></pre>
+        </div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const fileNameDisplay = document.getElementById('file-name');
+        const submitButton = document.getElementById('submit-button');
+        const uploadForm = document.getElementById('upload-form');
+        const spinner = document.getElementById('spinner');
+        const resultsArea = document.getElementById('results-area');
+        const resultsPre = document.getElementById('results-pre');
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = fileInput.files[0].name;
+                submitButton.disabled = false;
+            } else {
+                fileNameDisplay.textContent = 'No file chosen';
+                submitButton.disabled = true;
+            }
+        });
+
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (fileInput.files.length === 0) {
+                // Using a custom styled alert would be better, but for simplicity:
+                alert('Please select a file first.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            // Show spinner and hide results
+            spinner.style.display = 'block';
+            resultsArea.style.display = 'none';
+            submitButton.disabled = true;
+            submitButton.textContent = 'Processing...';
+
+            try {
+                const response = await fetch('/process', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    // Format the JSON nicely for display
+                    resultsPre.textContent = JSON.stringify(result, null, 2);
+                } else {
+                    // Display error message from the server (FastAPI uses 'detail')
+                    resultsPre.textContent = `Error: ${result.detail || 'An unknown error occurred.'}`;
+                }
+                resultsArea.style.display = 'block';
+
+            } catch (error) {
+                resultsPre.textContent = `An unexpected error occurred: ${error.message}`;
+                resultsArea.style.display = 'block';
+            } finally {
+                // Hide spinner and re-enable button
+                spinner.style.display = 'none';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Process Audio';
+            }
+        });
+    </script>
+</body>
+</html>
