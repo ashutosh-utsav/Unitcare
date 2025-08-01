@@ -7,14 +7,11 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import ValidationError
 
-# Import our custom modules
 from services import transcribe_audio, extract_emr_data
 from models import EMRData
 
-# Load environment variables from the .env file
 load_dotenv()
 
-# Initialize the FastAPI app
 app = FastAPI()
 
 @app.get("/")
@@ -29,8 +26,7 @@ async def process_audio_file(file: UploadFile = File(...)):
     """
     Endpoint to upload an audio file, process it, and return structured EMR data.
     """
-    # Create a temporary file to store the upload
-    # This is necessary because Whisper needs a file path to read from
+
     try:
         with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(file.filename)[1]) as tmp:
             shutil.copyfileobj(file.file, tmp)
@@ -39,17 +35,14 @@ async def process_audio_file(file: UploadFile = File(...)):
         file.file.close()
 
     try:
-        # --- 1. Transcribe Audio ---
         transcript = transcribe_audio(tmp_path)
         if not transcript:
             raise HTTPException(status_code=400, detail="Audio transcription failed or produced no text.")
 
-        # --- 2. Extract EMR Data ---
         emr_data_dict = extract_emr_data(transcript)
         if not emr_data_dict:
             raise HTTPException(status_code=500, detail="Failed to extract EMR data from the transcript.")
 
-        # --- 3. Validate Data ---
         try:
             validated_data = EMRData(**emr_data_dict)
             return validated_data
