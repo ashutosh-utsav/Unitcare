@@ -7,7 +7,10 @@ dependencies = [
     "google-generativeai",
     "python-dotenv",
     "pydantic",
-    "fastapi", # For the web framework
-    "uvicorn[standard]", # For the web server
-    "python-multipart", # For file uploads
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "pandas>=2.3.1",
+    "pdfplumber>=0.11.7",
+    "streamlit>=1.47.1",
 ]

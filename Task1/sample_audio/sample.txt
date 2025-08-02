@@ -1,0 +1,21 @@
+Doctor: Good afternoon, Mrs. Davis. It's good to see you again. How have you been since your last visit?
+
+Patient: Hello, Dr. Evans. I've been doing okay, thank you. A bit tired lately, but otherwise alright. I'm here for my regular blood pressure check-up.
+
+Doctor: I see. Let's talk about that. Are you still taking the Lisinopril we prescribed, 10 milligrams once a day?
+
+Patient: Yes, every morning. I haven't missed a dose. But for the past two or three weeks, I've noticed a dry, hacking cough that just won't go away. It's especially bothersome at night.
+
+Doctor: I understand. A persistent dry cough can be a side effect of Lisinopril. Have you been checking your blood pressure at home?
+
+Patient: I have. The readings have been consistently good, usually around 125 over 80. Much better than before.
+
+Doctor: That's excellent news regarding the blood pressure itself. Based on what you're describing, the cough is very likely a side effect of the medication. It's quite common. I think the best course of action is to switch your medication.
+
+Patient: Oh, okay. What would we switch to?
+
+Doctor: I'm going to prescribe Losartan, 50 milligrams once daily. It works in a similar way to control blood pressure but belongs to a different class of drugs that doesn't typically cause a cough. Please stop taking the Lisinopril and start the Losartan tomorrow morning. I'd also like you to continue monitoring your pressure at home and we'll schedule a follow-up appointment in one month to see how you're doing on the new medication.
+
+Patient: That sounds like a good plan. Thank you, Doctor.
+
+Doctor: You're welcome. My assistant will give you the new prescription on your way out. See you in a month, Mrs. Davis.
